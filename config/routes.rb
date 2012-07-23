@@ -1,4 +1,12 @@
 HackerNews::Application.routes.draw do
+  # resources :urls
+  
+  get "urls/index"
+
+  get "urls/new"
+
+  get "urls/create"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
