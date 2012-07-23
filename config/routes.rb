@@ -1,5 +1,5 @@
 HackerNews::Application.routes.draw do
-  # resources :urls
+  resources :urls
   
   get "urls/index"
 
