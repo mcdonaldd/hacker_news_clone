@@ -1,0 +1,16 @@
+<%=form_for(@url) do |url| %>
+
+<div class="field">
+  
+  <%= url.label 'Suggest crap for people to read:'%>
+  <%= url.text_field :link %>
+  <br \>
+  Use 'http://' before your link......or you'll die. 
+  
+</div>
+
+<div class="actions">
+  <br \>
+  <%= url.submit %>
+</div>
+<% end %>
