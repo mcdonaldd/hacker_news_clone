@@ -17,7 +17,7 @@
 	        <li><a href="/about">About</a></li>
 	      </ul>
 	      <ul class="nav pull-right">
-	        <li><a href="/sign_in">Sing In</a></li>
+	        <li><a href="/sign_in">Sign In</a></li>
 	      </ul>
 	    </div>
 	  </div>
@@ -30,7 +30,7 @@
 			<div class="alert alert-<%= key %>"><%= value %></div>
 		<% end %>
       <%= yield %>
-      <%= debug(params) if Rails.env.development? %>
+      <%= debug(params) %>
     </div>
 
 </body>
