@@ -9,3 +9,27 @@
     </section>
   </aside>
 </div>
+
+
+<p>   
+    <table>
+      <tr>
+        
+        <th>Crap You Have Submitted</th>
+      </tr>
+      <% @url.each do |url|%>
+      <tr>
+       <% if @user.id == url.user.id %>
+	 	  <td> <%=link_to url.link, url.link  %> <br \> </td>
+		  <td> <%=link_to "edit", "/urls/#{url.id}" %> <br \> </td>
+	   <% end %>
+     
+      </tr>
+		
+      <% end %>
+    </table>
+</p>
+
+<FORM METHOD="LINK" ACTION="/urls/new">
+<INPUT TYPE="submit" VALUE="Create some new crap" class="btn primary">
+</FORM>

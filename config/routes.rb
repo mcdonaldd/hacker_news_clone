@@ -1,5 +1,5 @@
 HackerNews::Application.routes.draw do
-  root :to => "users#new"
+  root :to => "urls#index"
        
   
   resources :sessions, only: [:new, :create, :destroy]
@@ -15,6 +15,7 @@ HackerNews::Application.routes.draw do
   get "urls/index"
   get "urls/new"
   get "urls/create"
+  get "urls/show"
   
 end
 

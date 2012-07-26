@@ -4,17 +4,24 @@
       <tr>
         
         <th>Crap You Should Read</th>
+		<th>Submitted By</th>
       </tr>
       <% @url.each do |url|%>
       <tr>
        
-	   <td> <%=link_to url.link, url.link %> <br \> </td>
+	   <td> <%=link_to url.link, url.link  %> <br \> </td>
+	   <td> <%= url.user.name.inspect %> <br\ > </td>
     
       </tr>
+	
       <% end %>
     </table>
 </p>
 
 <FORM METHOD="LINK" ACTION="/urls/new">
-<INPUT TYPE="submit" VALUE="Creare some new crap" class="btn primary">
+<INPUT TYPE="submit" VALUE="Create some new crap" class="btn primary">
 </FORM>
+
+
+
+

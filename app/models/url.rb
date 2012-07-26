@@ -1,5 +1,7 @@
 class Url < ActiveRecord::Base
-  attr_accessible :link 
+  belongs_to :user
+  
+  attr_accessible :link, :user_id
   validates_uniqueness_of :link
   
 end

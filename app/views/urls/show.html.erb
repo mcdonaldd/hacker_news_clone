@@ -1,0 +1,31 @@
+<!-- <% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+</div>
+ -->
+
+
+<%=form_for(@url) do |url| %>
+	<%= render 'shared/error_messages' %>
+
+<div class="field">
+
+  <%= url.label 'Edit your crappy link:'%>
+  <%= url.text_field :link %>
+  <br \>
+  Use 'http://' before your link......or you'll die. 
+
+</div>
+
+<div class="actions">
+  <br \>
+  <%= url.submit "Update Url", class: "btn btn-large btn-primary" %>
+</div>
+<% end %>
