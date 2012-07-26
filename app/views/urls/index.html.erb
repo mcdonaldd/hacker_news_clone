@@ -10,8 +10,12 @@
       <tr>
        
 	   <td> <%=link_to url.link, url.link  %> <br \> </td>
-	   <td> <%= url.user.name.inspect %> <br\ > </td>
-    
+					<% if url.user.nil?%>
+						<td> Anonymous Poster<br\ > </td>
+					<% else %>
+	   				<td> <%= url.user.name.inspect %> <br\ > </td>
+    			<% end %>
+
       </tr>
 	
       <% end %>

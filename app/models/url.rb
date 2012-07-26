@@ -1,8 +1,13 @@
 class Url < ActiveRecord::Base
-  belongs_to :user
-  
   attr_accessible :link, :user_id
+  belongs_to :user
+ 
   validates_uniqueness_of :link
+  
+  before_save do |url|
+    self.link = "http://" + link
+  end
+  
   
 end
 
